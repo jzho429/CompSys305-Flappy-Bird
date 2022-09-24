@@ -1,0 +1,1 @@
+[outfname, rows, cols] = miffilegen('menuButtonsOld.jpg', 'menuButtons.MIF', 84, 40);

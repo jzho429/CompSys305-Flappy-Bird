@@ -1,0 +1,187 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 14:18:42  May 10, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FlappyBird_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:14:05  MAY 10, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name TOP_LEVEL_ENTITY FlappyBird
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# Advanced I/O Timing Assignments
+# ===============================
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# ------------------------
+# start ENTITY(FlappyBird)
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(FlappyBird)
+# ----------------------
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_G21 -to 50MEGhz
+set_location_assignment PIN_K22 -to blue_out[0]
+set_location_assignment PIN_K21 -to blue_out[1]
+set_location_assignment PIN_J22 -to blue_out[2]
+set_location_assignment PIN_K18 -to blue_out[3]
+set_location_assignment PIN_H22 -to green_out[0]
+set_location_assignment PIN_J17 -to green_out[1]
+set_location_assignment PIN_K17 -to green_out[2]
+set_location_assignment PIN_J21 -to green_out[3]
+set_location_assignment PIN_H19 -to red_out[0]
+set_location_assignment PIN_H17 -to red_out[1]
+set_location_assignment PIN_H20 -to red_out[2]
+set_location_assignment PIN_H21 -to red_out[3]
+set_location_assignment PIN_L21 -to horiz_sync_out
+set_location_assignment PIN_L22 -to vert_sync_out
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_location_assignment PIN_P22 -to mouse_clk
+set_location_assignment PIN_P21 -to mouse_data
+set_location_assignment PIN_C1 -to LEDOut[3]
+set_location_assignment PIN_C2 -to LEDOut[4]
+set_location_assignment PIN_B2 -to LEDOut[5]
+set_location_assignment PIN_B1 -to LEDOut[6]
+set_global_assignment -name SEARCH_PATH "\\\\files.auckland.ac.nz\\myhome\\documents\\github\\compsys305-flappy-bird\\vhd"
+set_global_assignment -name SEARCH_PATH "\\\\files.auckland.ac.nz\\myhome\\documents\\github\\compsys305-flappy-bird\\symbols"
+set_global_assignment -name SEARCH_PATH "d:\\wljas\\github\\compsys305-flappy-bird\\vhd"
+set_global_assignment -name SEARCH_PATH "d:\\wljas\\github\\compsys305-flappy-bird\\symbols"
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_location_assignment PIN_J3 -to stateOut[2]
+set_location_assignment PIN_J2 -to stateOut[1]
+set_location_assignment PIN_J1 -to stateOut[0]
+set_location_assignment PIN_J6 -to sw0
+set_location_assignment PIN_H1 -to LEDOut[0]
+set_location_assignment PIN_F2 -to LEDOut[1]
+set_location_assignment PIN_E1 -to LEDOut[2]
+set_global_assignment -name VHDL_FILE VHD/debounceOriginal.vhd
+set_global_assignment -name VHDL_FILE VHD/pickupsControl.vhd
+set_global_assignment -name VHDL_FILE VHD/pickupsConverter.vhd
+set_global_assignment -name SMF_FILE flappyBirdState.smf
+set_global_assignment -name VHDL_FILE VHD/flappyBirdState.vhd
+set_global_assignment -name VHDL_FILE VHD/promptConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/heartConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/menuConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/birdDownROM.vhd
+set_global_assignment -name VHDL_FILE VHD/textConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/textROM.vhd
+set_global_assignment -name VHDL_FILE VHD/menuButtonsROM.vhd
+set_global_assignment -name VHDL_FILE VHD/heartROM.vhd
+set_global_assignment -name VHDL_FILE VHD/numberConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/numbersROM.vhd
+set_global_assignment -name VHDL_FILE VHD/groundConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/groundROM.vhd
+set_global_assignment -name VHDL_FILE VHD/debounce.vhd
+set_global_assignment -name VHDL_FILE VHD/cursorConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/cursorROM.vhd
+set_global_assignment -name VHDL_FILE VHD/gameLogic.vhd
+set_global_assignment -name VHDL_FILE VHD/backgroundConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/backgroundROM.vhd
+set_global_assignment -name VHDL_FILE VHD/collisionDetection.vhd
+set_global_assignment -name VHDL_FILE VHD/pipeBodyROM.vhd
+set_global_assignment -name VHDL_FILE VHD/pipeControl.vhd
+set_global_assignment -name VHDL_FILE VHD/pipeConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/pipeHeadROM.vhd
+set_global_assignment -name VHDL_FILE VHD/VGASync.vhd
+set_global_assignment -name VHDL_FILE VHD/rgbMesh.vhd
+set_global_assignment -name VHDL_FILE VHD/mouse.vhd
+set_global_assignment -name VHDL_FILE VHD/charROM.vhd
+set_global_assignment -name VHDL_FILE VHD/birdRomConverter.vhd
+set_global_assignment -name VHDL_FILE VHD/birdROM.vhd
+set_global_assignment -name VHDL_FILE VHD/birdControl.vhd
+set_global_assignment -name BDF_FILE FlappyBird.bdf
+set_global_assignment -name QIP_FILE VHD/clock.qip
+set_global_assignment -name QIP_FILE VHD/pipeHeadROM.qip
+set_global_assignment -name QIP_FILE backgroundROM.qip
+set_global_assignment -name VHDL_FILE VHD/lfsr.vhd
+set_global_assignment -name VHDL_FILE VHD/promptROM.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
